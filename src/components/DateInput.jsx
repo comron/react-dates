@@ -35,6 +35,7 @@ const propTypes = forbidExtraProps({
   showCaret: PropTypes.bool,
   verticalSpacing: nonNegativeInteger,
   small: PropTypes.bool,
+  light: PropTypes.bool,
 
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
@@ -60,6 +61,7 @@ const defaultProps = {
   showCaret: false,
   verticalSpacing: DEFAULT_VERTICAL_SPACING,
   small: false,
+  light: false,
 
   onChange() {},
   onFocus() {},
@@ -178,6 +180,7 @@ class DateInput extends React.Component {
       openDirection,
       verticalSpacing,
       small,
+      light,
       styles,
       theme: { reactDates },
     } = this.props;
@@ -204,6 +207,7 @@ class DateInput extends React.Component {
           {...css(
             styles.DateInput_input,
             small && styles.DateInput_input__small,
+            light && styles.DateInput_input__light,
             readOnly && styles.DateInput_input__readOnly,
             focused && styles.DateInput_input__focused,
             disabled && styles.DateInput_input__disabled,
@@ -288,7 +292,6 @@ export default withStyles(({
   },
 
   DateInput_input: {
-    fontWeight: 200,
     fontSize: font.input.size,
     lineHeight: font.input.lineHeight,
     color: color.text,
@@ -314,6 +317,10 @@ export default withStyles(({
     paddingBottom: spacing.displayTextPaddingBottom_small,
     paddingLeft: spacing.displayTextPaddingLeft_small,
     paddingRight: spacing.displayTextPaddingRight_small,
+  },
+
+  DateInput_input__light: {
+    fontWeight: 200,
   },
 
   DateInput_input__readOnly: {

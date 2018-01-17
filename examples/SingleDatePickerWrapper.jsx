@@ -40,6 +40,7 @@ const defaultProps = {
   customInputIcon: null,
   block: false,
   small: false,
+  light: false,
   verticalSpacing: undefined,
 
   // calendar presentation and interaction related props

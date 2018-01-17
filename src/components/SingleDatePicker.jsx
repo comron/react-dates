@@ -60,6 +60,7 @@ const defaultProps = {
   noBorder: false,
   block: false,
   small: false,
+  light: false,
   verticalSpacing: DEFAULT_VERTICAL_SPACING,
 
   // calendar presentation and interaction related props
@@ -479,6 +480,7 @@ class SingleDatePicker extends React.Component {
       noBorder,
       block,
       small,
+      light,
       verticalSpacing,
       styles,
     } = this.props;
@@ -528,6 +530,7 @@ class SingleDatePicker extends React.Component {
             noBorder={noBorder}
             block={block}
             small={small}
+            light={light}
             verticalSpacing={verticalSpacing}
           />
 

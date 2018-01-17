@@ -37,6 +37,7 @@ const propTypes = forbidExtraProps({
   noBorder: PropTypes.bool,
   block: PropTypes.bool,
   small: PropTypes.bool,
+  light: PropTypes.bool,
   verticalSpacing: nonNegativeInteger,
 
   onChange: PropTypes.func,
@@ -70,6 +71,8 @@ const defaultProps = {
   isRTL: false,
   noBorder: false,
   block: false,
+  small: false,
+  light: false,
   verticalSpacing: undefined,
 
   onChange() {},
@@ -113,6 +116,7 @@ function SingleDatePickerInput({
   noBorder,
   block,
   small,
+  light,
   verticalSpacing,
   styles,
 }) {
@@ -174,6 +178,7 @@ function SingleDatePickerInput({
         openDirection={openDirection}
         verticalSpacing={verticalSpacing}
         small={small}
+        light={light}
       />
 
       {showClearDate && (

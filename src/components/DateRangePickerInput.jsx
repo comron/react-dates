@@ -61,6 +61,7 @@ const propTypes = forbidExtraProps({
   noBorder: PropTypes.bool,
   block: PropTypes.bool,
   small: PropTypes.bool,
+  light: PropTypes.bool,
   verticalSpacing: nonNegativeInteger,
 
   // accessibility
@@ -107,6 +108,7 @@ const defaultProps = {
   noBorder: false,
   block: false,
   small: false,
+  light: false,
   verticalSpacing: undefined,
 
   // accessibility
@@ -155,6 +157,7 @@ function DateRangePickerInput({
   block,
   verticalSpacing,
   small,
+  light,
   styles,
 }) {
   const calendarIcon = customInputIcon || (
@@ -230,6 +233,7 @@ function DateRangePickerInput({
         onKeyDownQuestionMark={onKeyDownQuestionMark}
         verticalSpacing={verticalSpacing}
         small={small}
+        light={light}
       />
 
       <div
@@ -259,6 +263,7 @@ function DateRangePickerInput({
         onKeyDownQuestionMark={onKeyDownQuestionMark}
         verticalSpacing={verticalSpacing}
         small={small}
+        light={light}
       />
 
       {showClearDates && (
